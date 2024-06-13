@@ -16,7 +16,7 @@ export const SocketContextProvider = ({ children }) => {
   useEffect(() => {
     let newSocket;
     if (authUser) {
-      const socket = io("http://localhost:8000", {
+      const socket = io("https://wavoo.onrender.com/", {
         query: { userId: authUser._id },
       });
       setSocket(socket);
